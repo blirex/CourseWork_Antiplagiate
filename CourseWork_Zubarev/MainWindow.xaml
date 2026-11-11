@@ -1,0 +1,446 @@
+﻿<Window x:Class="CourseWork_Zubarev.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Перевірка оригінальності"
+        Height="780" Width="1250"
+        MinHeight="680" MinWidth="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="#EAF1FA"
+        FontFamily="Segoe UI">
+
+    <Window.Resources>
+        <DropShadowEffect x:Key="SoftShadow"
+                          BlurRadius="22"
+                          ShadowDepth="5"
+                          Opacity="0.10"
+                          Color="#31547A"/>
+
+        <DropShadowEffect x:Key="ButtonShadow"
+                          BlurRadius="12"
+                          ShadowDepth="3"
+                          Opacity="0.18"
+                          Color="#3478C8"/>
+
+        
+        <Style x:Key="Card" TargetType="Border">
+            <Setter Property="Background" Value="#EFFFFFFF"/>
+            <Setter Property="CornerRadius" Value="18"/>
+            <Setter Property="Padding" Value="22"/>
+            <Setter Property="BorderBrush" Value="#C9D9EC"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Effect" Value="{StaticResource SoftShadow}"/>
+        </Style>
+
+        <Style x:Key="Input" TargetType="TextBox">
+            <Setter Property="Background" Value="#F7FAFF"/>
+            <Setter Property="Foreground" Value="#203653"/>
+            <Setter Property="BorderBrush" Value="#D5E2F1"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="12"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="CaretBrush" Value="#3478C8"/>
+            <Setter Property="SelectionBrush" Value="#A9CCF5"/>
+        </Style>
+
+      
+        <Style x:Key="ButtonBase" TargetType="Button">
+            <Setter Property="Height" Value="44"/>
+            <Setter Property="Padding" Value="17,0"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="#E5EFFB"/>
+            <Setter Property="Foreground" Value="#28527F"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bd"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="10"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd"
+                                        Property="Opacity" Value="0.82"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Bd"
+                                        Property="Opacity" Value="0.68"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Bd"
+                                        Property="Opacity" Value="0.45"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="BlueButton"
+               TargetType="Button"
+               BasedOn="{StaticResource ButtonBase}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0"
+                                         EndPoint="1,1">
+                        <GradientStop Color="#438BE0" Offset="0"/>
+                        <GradientStop Color="#2866B7" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Effect" Value="{StaticResource ButtonShadow}"/>
+        </Style>
+
+        <Style x:Key="GreenButton"
+               TargetType="Button"
+               BasedOn="{StaticResource ButtonBase}">
+            <Setter Property="Background" Value="#168F91"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style x:Key="FieldLabel" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#7187A3"/>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="1,1">
+                <GradientStop Color="#E6EFFB" Offset="0"/>
+                <GradientStop Color="#F5F8FD" Offset="0.55"/>
+                <GradientStop Color="#E4EDF9" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+     
+        <Ellipse Width="330"
+                 Height="330"
+                 Fill="#263F8BCE"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Top"
+                 Margin="0,-150,-80,0"
+                 IsHitTestVisible="False"/>
+
+        <Ellipse Width="260"
+                 Height="260"
+                 Fill="#183E83C7"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Bottom"
+                 Margin="-120,0,0,-120"
+                 IsHitTestVisible="False"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="105"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="38"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0"
+                    Background="#E817365A"
+                    BorderBrush="#507AA5"
+                    BorderThickness="0,0,0,1">
+
+                <Grid Margin="32,0">
+                    <StackPanel VerticalAlignment="Center">
+
+                        <TextBlock Text="ІНСТРУМЕНТ АНАЛІЗУ ДОКУМЕНТІВ"
+                                   Foreground="#A9C9ED"
+                                   FontSize="10"
+                                   FontWeight="Bold"/>
+
+                        <TextBlock Text="Аналіз оригінальності"
+                                   Foreground="White"
+                                   FontSize="27"
+                                   FontWeight="SemiBold"
+                                   Margin="0,4,0,0"/>
+
+                        <TextBlock Text="Перевірка та обробка текстових документів"
+                                   Foreground="#D0E0F3"
+                                   FontSize="11"
+                                   Margin="0,3,0,0"/>
+                    </StackPanel>
+
+                    <Border HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="#35FFFFFF"
+                            BorderBrush="#557FA8"
+                            BorderThickness="1"
+                            CornerRadius="12"
+                            Padding="15,11">
+
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Width="8"
+                                     Height="8"
+                                     Fill="#65D6B4"
+                                     Margin="0,0,9,0"
+                                     VerticalAlignment="Center"/>
+
+                            <TextBlock Text="Локальна база даних"
+                                       Foreground="White"
+                                       FontSize="12"
+                                       FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <Grid Grid.Row="1"
+                  Margin="26,22,26,18">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.65*"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="0.9*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0"
+                        Style="{StaticResource Card}">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0"
+                                    Margin="0,0,0,21">
+
+                            <TextBlock Text="Текст роботи"
+                                       FontSize="21"
+                                       FontWeight="SemiBold"
+                                       Foreground="#1D3553"/>
+
+                            <TextBlock Text="Введіть текст вручну або завантажте документ"
+                                       FontSize="12"
+                                       Foreground="#8294AC"
+                                       Margin="0,5,0,0"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="1"
+                                    Margin="0,0,0,17">
+
+                            <TextBlock Text="НАЗВА ДОКУМЕНТА"
+                                       Style="{StaticResource FieldLabel}"
+                                       Margin="0,0,0,8"/>
+
+                            <TextBox x:Name="TitleTextBox"
+                                     Style="{StaticResource Input}"
+                                     Height="42"
+                                     VerticalContentAlignment="Center"/>
+                        </StackPanel>
+
+                        <Grid Grid.Row="2">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0"
+                                  Margin="0,0,0,9">
+
+                                <TextBlock Text="ВМІСТ ДОКУМЕНТА"
+                                           Style="{StaticResource FieldLabel}"/>
+
+                                <TextBlock Text="TXT · DOCX · DOC · PDF · RTF · ODT"
+                                           FontSize="10"
+                                           Foreground="#4382C4"
+                                           HorizontalAlignment="Right"/>
+                            </Grid>
+
+                            <Border Grid.Row="1"
+                                    Background="#F7FAFF"
+                                    BorderBrush="#D5E2F1"
+                                    BorderThickness="1"
+                                    CornerRadius="11">
+
+                                <TextBox x:Name="ContentTextBox"
+                                         Background="Transparent"
+                                         Foreground="#243B58"
+                                         BorderThickness="0"
+                                         Padding="15"
+                                         FontSize="13"
+                                         AcceptsReturn="True"
+                                         AcceptsTab="True"
+                                         TextWrapping="Wrap"
+                                         VerticalContentAlignment="Top"
+                                         VerticalScrollBarVisibility="Auto"
+                                         HorizontalScrollBarVisibility="Disabled"/>
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Row="3"
+                              Margin="0,18,0,0">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="9"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="9"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Button Grid.Column="0"
+                                    Content="Відкрити файл"
+                                    Style="{StaticResource ButtonBase}"
+                                    Click="OpenFile_Click"/>
+
+                            <Button Grid.Column="2"
+                                    Content="Перевірити текст"
+                                    Style="{StaticResource BlueButton}"
+                                    Click="Check_Click"/>
+
+                            <Button Grid.Column="4"
+                                    Content="Зберегти"
+                                    Style="{StaticResource GreenButton}"
+                                    Click="Save_Click"/>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+                <StackPanel Grid.Column="2">
+
+                    <Border Style="{StaticResource Card}"
+                            Margin="0,0,0,17">
+
+                        <StackPanel>
+
+                            <TextBlock Text="РЕЗУЛЬТАТ ПЕРЕВІРКИ"
+                                       Style="{StaticResource FieldLabel}"/>
+
+                            <TextBlock Text="Оригінальність тексту"
+                                       FontSize="19"
+                                       FontWeight="SemiBold"
+                                       Foreground="#1D3553"
+                                       Margin="0,14,0,15"/>
+
+                            <Border Background="#E8F2FF"
+                                    BorderBrush="#D0E2F8"
+                                    BorderThickness="1"
+                                    CornerRadius="12"
+                                    Padding="16">
+
+                                <TextBlock x:Name="ResultText"
+                                           Text="Очікується перевірка"
+                                           Foreground="#2869B4"
+                                           FontSize="18"
+                                           FontWeight="Bold"
+                                           TextWrapping="Wrap"/>
+                            </Border>
+
+                            <TextBlock Text="Результат формується після порівняння з роботами, збереженими в базі даних."
+                                       FontSize="12"
+                                       Foreground="#7B8FA9"
+                                       TextWrapping="Wrap"
+                                       Margin="0,13,0,0"
+                                       LineHeight="19"/>
+
+                            <Separator Margin="0,19,0,16"
+                                       Background="#DCE6F2"/>
+
+                            <TextBlock Text="ПОТОЧНИЙ СТАН"
+                                       Style="{StaticResource FieldLabel}"
+                                       Margin="0,0,0,9"/>
+
+                            <Border Background="#F2F7FD"
+                                    CornerRadius="9"
+                                    Padding="12">
+
+                                <TextBlock x:Name="StatusText"
+                                           Text="Документ ще не перевірено"
+                                           Foreground="#365B83"
+                                           FontSize="12"
+                                           TextWrapping="Wrap"/>
+                            </Border>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource Card}">
+
+                        <StackPanel>
+
+                            <Border Background="#E8F1FC"
+                                    CornerRadius="10"
+                                    Width="42"
+                                    Height="42"
+                                    HorizontalAlignment="Left"
+                                    Margin="0,0,0,13">
+
+                                <TextBlock Text="↓"
+                                           FontSize="24"
+                                           FontWeight="SemiBold"
+                                           Foreground="#3478C8"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"/>
+                            </Border>
+
+                            <TextBlock Text="Експорт звіту"
+                                       FontSize="19"
+                                       FontWeight="SemiBold"
+                                       Foreground="#1D3553"/>
+
+                            <TextBlock Text="Збережіть результати перевірки у текстовий файл."
+                                       FontSize="12"
+                                       Foreground="#8294AC"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,17"
+                                       LineHeight="19"/>
+
+                            <Button Content="Експортувати звіт"
+                                    Style="{StaticResource BlueButton}"
+                                    Click="Export_Click"/>
+
+                            <Border Background="#F1F6FD"
+                                    BorderBrush="#E0EAF5"
+                                    BorderThickness="1"
+                                    CornerRadius="9"
+                                    Padding="11"
+                                    Margin="0,14,0,0">
+
+                                <TextBlock Text="Формат звіту: TXT"
+                                           FontSize="11"
+                                           Foreground="#58789D"/>
+                            </Border>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
+
+            <Border Grid.Row="2"
+                    Background="#EFFFFFFF"
+                    BorderBrush="#D5E2F1"
+                    BorderThickness="0,1,0,0">
+
+                <Grid Margin="27,0">
+
+                    <TextBlock Text="Інструмент аналізу текстових документів"
+                               FontSize="10"
+                               Foreground="#8294AC"
+                               VerticalAlignment="Center"/>
+
+                    <TextBlock Text=".NET Framework 4.8"
+                               FontSize="10"
+                               Foreground="#8294AC"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
