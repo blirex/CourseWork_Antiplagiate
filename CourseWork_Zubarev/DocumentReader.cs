@@ -131,7 +131,7 @@ namespace CourseWork_Zubarev
 
                 if (entry == null)
                     throw new InvalidDataException(
-                        "В файле ODT не найден content.xml.");
+                        "У файлі ODT не знайдений content.xml.");
 
                 using (var stream = entry.Open())
                 {

@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\coursework_zubarev\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|solutionrelative:coursework_zubarev\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|c:\\users\\bashmak\\source\\repos\\coursework_zubarev\\coursework_zubarev\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|solutionrelative:coursework_zubarev\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\coursework_zubarev\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|c:\\users\\bashmak\\source\\repos\\coursework_zubarev\\coursework_zubarev\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|solutionrelative:coursework_zubarev\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|c:\\users\\bashmak\\source\\repos\\coursework_zubarev\\coursework_zubarev\\plagiarismservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|solutionrelative:coursework_zubarev\\plagiarismservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\coursework_zubarev\\documentreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +17,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\coursework_zubarev\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|solutionrelative:coursework_zubarev\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\coursework_zubarev\\plagiarismservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|solutionrelative:coursework_zubarev\\plagiarismservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\coursework_zubarev\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A16F2462-5E07-47F6-A0E7-B8B94FA7EDB3}|CourseWork_Zubarev\\CourseWork_Zubarev.csproj|solutionrelative:coursework_zubarev\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,52 +42,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\CourseWork_Zubarev\\App.xaml.cs",
+              "RelativeDocumentMoniker": "CourseWork_Zubarev\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\CourseWork_Zubarev\\App.xaml.cs",
+              "RelativeToolTip": "CourseWork_Zubarev\\App.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-12T18:43:32.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DocumentReader.cs",
               "DocumentMoniker": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\CourseWork_Zubarev\\DocumentReader.cs",
               "RelativeDocumentMoniker": "CourseWork_Zubarev\\DocumentReader.cs",
               "ToolTip": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\CourseWork_Zubarev\\DocumentReader.cs",
               "RelativeToolTip": "CourseWork_Zubarev\\DocumentReader.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwIUAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAIwIUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-24T14:51:48.792Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "PlagiarismService.cs",
               "DocumentMoniker": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\CourseWork_Zubarev\\PlagiarismService.cs",
               "RelativeDocumentMoniker": "CourseWork_Zubarev\\PlagiarismService.cs",
               "ToolTip": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\CourseWork_Zubarev\\PlagiarismService.cs",
               "RelativeToolTip": "CourseWork_Zubarev\\PlagiarismService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwEQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-11T17:01:53.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-11T17:01:53.232Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "DatabaseService.cs",
               "DocumentMoniker": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\CourseWork_Zubarev\\DatabaseService.cs",
               "RelativeDocumentMoniker": "CourseWork_Zubarev\\DatabaseService.cs",
               "ToolTip": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\CourseWork_Zubarev\\DatabaseService.cs",
               "RelativeToolTip": "CourseWork_Zubarev\\DatabaseService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACIAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAIwIsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-11T16:18:28.422Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\CourseWork_Zubarev\\MainWindow.xaml",
               "RelativeDocumentMoniker": "CourseWork_Zubarev\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\CourseWork_Zubarev\\MainWindow.xaml*",
-              "RelativeToolTip": "CourseWork_Zubarev\\MainWindow.xaml*",
+              "ToolTip": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\CourseWork_Zubarev\\MainWindow.xaml",
+              "RelativeToolTip": "CourseWork_Zubarev\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-11T16:13:21.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-11T16:13:21.334Z"
             },
             {
               "$type": "Document",
@@ -93,7 +108,7 @@
               "RelativeDocumentMoniker": "CourseWork_Zubarev\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Bashmak\\source\\repos\\CourseWork_Zubarev\\CourseWork_Zubarev\\MainWindow.xaml.cs",
               "RelativeToolTip": "CourseWork_Zubarev\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowDkAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAcwKoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-11T16:13:19.607Z",
               "EditorCaption": ""
