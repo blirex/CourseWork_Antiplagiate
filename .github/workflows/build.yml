@@ -1,9 +1,11 @@
+
 name: Build WPF Application
 
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -16,8 +18,24 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
 
+      - name: Find solution
+        id: solution
+        shell: pwsh
+        run: |
+          $solution = Get-ChildItem -Path . -Filter *.sln -Recurse | Select-Object -First 1
+
+          if (-not $solution) {
+            Write-Error "Solution file (.sln) not found"
+            exit 1
+          }
+
+          Write-Host "Found: $($solution.FullName)"
+          "path=$($solution.FullName)" >> $env:GITHUB_OUTPUT
+
       - name: Build application
-        run: msbuild CourseWork_Zubarev.sln /p:Configuration=Release /p:Platform="Any CPU"
+        shell: pwsh
+        run: |
+          msbuild "${{ steps.solution.outputs.path }}" /p:Configuration=Release "/p:Platform=Any CPU"
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
@@ -26,3 +44,4 @@ jobs:
           path: |
             **/bin/Release/*.exe
             **/bin/Release/*.dll
+          if-no-files-found: error
