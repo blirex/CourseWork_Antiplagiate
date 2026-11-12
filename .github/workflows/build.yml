@@ -18,30 +18,43 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
 
-      - name: Find solution
-        id: solution
+      - name: Find project
+        id: project
         shell: pwsh
         run: |
-          $solution = Get-ChildItem -Path . -Filter *.sln -Recurse | Select-Object -First 1
+          $solution = Get-ChildItem -Path . -Recurse -File |
+            Where-Object { $_.Extension -in ".sln", ".slnx" } |
+            Select-Object -First 1
 
-          if (-not $solution) {
-            Write-Error "Solution file (.sln) not found"
-            exit 1
+          if ($solution) {
+            $projectPath = $solution.FullName
+          }
+          else {
+            $project = Get-ChildItem -Path . -Filter *.csproj -Recurse -File |
+              Select-Object -First 1
+
+            if (-not $project) {
+              Write-Error "Не найден файл .sln, .slnx или .csproj"
+              exit 1
+            }
+
+            $projectPath = $project.FullName
           }
 
-          Write-Host "Found: $($solution.FullName)"
-          "path=$($solution.FullName)" >> $env:GITHUB_OUTPUT
+          Write-Host "Найден проект: $projectPath"
+          "path=$projectPath" >> $env:GITHUB_OUTPUT
 
       - name: Build application
         shell: pwsh
         run: |
-          msbuild "${{ steps.solution.outputs.path }}" /p:Configuration=Release "/p:Platform=Any CPU"
+          msbuild "${{ steps.project.outputs.path }}" /p:Configuration=Release
 
-      - name: Upload EXE
+      - name: Upload application
         uses: actions/upload-artifact@v4
         with:
           name: PlagiarismDetectionSystem
           path: |
             **/bin/Release/*.exe
             **/bin/Release/*.dll
+            **/bin/Release/*.config
           if-no-files-found: error
