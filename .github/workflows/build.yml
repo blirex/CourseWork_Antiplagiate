@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -47,14 +47,25 @@ jobs:
       - name: Build application
         shell: pwsh
         run: |
-          msbuild "${{ steps.project.outputs.path }}" /p:Configuration=Release
+          msbuild "${{ steps.project.outputs.path }}" /p:Configuration=Release /p:Platform="Any CPU"
+
+      - name: Find SQLite native libraries
+        shell: pwsh
+        run: |
+          $files = Get-ChildItem -Path . -Filter SQLite.Interop.dll -Recurse -File
+
+          foreach ($file in $files) {
+            Write-Host "SQLite found: $($file.FullName)"
+          }
+
+          if (-not $files) {
+            Write-Warning "SQLite.Interop.dll не найден после сборки"
+          }
 
       - name: Upload application
         uses: actions/upload-artifact@v4
         with:
           name: PlagiarismDetectionSystem
           path: |
-            **/bin/Release/*.exe
-            **/bin/Release/*.dll
-            **/bin/Release/*.config
+            **/bin/Release/**
           if-no-files-found: error
